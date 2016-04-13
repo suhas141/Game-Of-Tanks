@@ -5,14 +5,30 @@ public class Generator : MonoBehaviour
 {
 
     public GameObject cube;
+    public GameObject grass;
+
     public  int numberOfCubes;
     public static int scube;
+
+    public int numberOfGrass;
+    public static int sGrass;
+
     public int min, max;
 
     void Start()
     {
        
         PlaceCubes();
+        PlaceGrass();
+    }
+
+    void PlaceGrass()
+    {
+        sGrass = numberOfGrass;
+        for (int i = 0; i < numberOfGrass; i++)
+        {
+            Instantiate(grass, GeneratedPosition(), Quaternion.identity);
+        }
     }
 
     void PlaceCubes()
@@ -39,6 +55,13 @@ public class Generator : MonoBehaviour
             numberOfCubes--;
             PlaceCubes();
            
+        }
+
+        if (sGrass == 0)
+        {
+            numberOfGrass--;
+            PlaceGrass();
+
         }
     }
 }
