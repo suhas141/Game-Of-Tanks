@@ -1,32 +1,34 @@
 ﻿using UnityEngine;
-using System.Collections;
+
 
 public class Node : IHeapItem<Node>
 {
 
-    public bool walkable;
-    public Vector3 worldPosition;
-    public int gridX;
-    public int gridY;
-
-    public int gCost;
-    public int hCost;
-    public Node parent;
+   //world coordinates
+    public int gridXCoord;
+    public int gridYCoord;
+    //for a star algorithm
+    public int gCostAstar;
+    public int hCostAstar;
+    //root node
+    public Node root;
     int heapIndex;
+    public bool walkableArea;
+    public Vector3 worldCoord;
 
-    public Node(bool _walkable, Vector3 _worldPos, int _gridX, int _gridY)
+    public Node(bool _walkableArea, Vector3 _worldPos, int _gridXCoord, int _gridYCoord)
     {
-        walkable = _walkable;
-        worldPosition = _worldPos;
-        gridX = _gridX;
-        gridY = _gridY;
+        walkableArea = _walkableArea;
+        worldCoord = _worldPos;
+        gridXCoord = _gridXCoord;
+        gridYCoord = _gridYCoord;
     }
 
-    public int fCost
+    public int fCostAstar
     {
         get
         {
-            return gCost + hCost;
+            return gCostAstar + hCostAstar;
         }
     }
 
@@ -42,14 +44,14 @@ public class Node : IHeapItem<Node>
         }
     }
 
-    public int CompareTo(Node nodeToCompare)
+    public int CompareTo(Node n)
     {
-        int compare = fCost.CompareTo(nodeToCompare.fCost);
-
-        if (compare == 0)
+        int cmp = fCostAstar.CompareTo(n.fCostAstar);
+   
+        if (cmp == 0)
         {
-            compare = hCost.CompareTo(nodeToCompare.hCost);
+            cmp = hCostAstar.CompareTo(n.hCostAstar);
         }
-        return -compare;
+        return -cmp;
     }
 }

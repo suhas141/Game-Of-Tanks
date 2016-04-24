@@ -19,3 +19,24 @@ E:\unity\small_unity3d_projects-master\small_unity3d_projects-master\Temp\bin\De
 E:\unity\small_unity3d_projects-master\small_unity3d_projects-master\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 E:\unity\small_unity3d_projects-master\small_unity3d_projects-master\obj\Debug\Assembly-CSharp.dll
 E:\unity\small_unity3d_projects-master\small_unity3d_projects-master\obj\Debug\Assembly-CSharp.pdb
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\Temp\bin\Debug\Assembly-CSharp.dll
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\Temp\bin\Debug\Assembly-CSharp.pdb
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\Temp\bin\Debug\UnityEditor.dll
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\Temp\bin\Debug\UnityEngine.dll
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\Temp\bin\Debug\UnityEngine.Networking.dll
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\Temp\bin\Debug\UnityEngine.UI.dll
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\Temp\bin\Debug\Mono.Cecil.dll
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\Temp\bin\Debug\Unity.SerializationLogic.dll
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\Temp\bin\Debug\Unity.DataContract.dll
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\Temp\bin\Debug\Unity.UNetWeaver.dll
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\Temp\bin\Debug\Unity.CecilTools.dll
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\Temp\bin\Debug\UnityEngine.xml
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\Temp\bin\Debug\UnityEditor.xml
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\Temp\bin\Debug\UnityEngine.UI.xml
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\Temp\bin\Debug\UnityEngine.Networking.xml
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\obj\Debug\Assembly-CSharp.dll
+E:\downloads\New folder\Game-Of-Tanks-master3\Game-Of-Tanks-master\obj\Debug\Assembly-CSharp.pdb

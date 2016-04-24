@@ -11,10 +11,18 @@ public class Unit : MonoBehaviour
     public int speed = 20;
     Vector3[] path;
     int targetIndex;
-   
 
+    int counter = 0;
     public float shootingTime = 3;
     public float _shootingTimer = 1;
+
+    public GameObject cube;
+    public int numberOfCubes;
+    public int min, max;
+    public int once = 0;
+
+    public static Transform targetPos;
+
 
     Quaternion initialRot;
 
@@ -22,17 +30,40 @@ public class Unit : MonoBehaviour
 
     void Start()
     {
-        PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+        print("start called");
+        PlaceCubes();
+        PathManager.RequestPath(transform.position, target.position, OnPathFound);
         controller = GetComponent<TankController>();
-        initialRot = transform.rotation;
+      //  transform.Rotate(new Vector3(0, 0, 0));
+     //   initialRot = transform.rotation;
+        print(transform);
     }
 
     void Update()
     {
-        PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
+        if (once == 0)
+        {
+         //   transform.Rotate(new Vector3(0, 0, 0));
+         //   initialRot = transform.rotation;
+         //   once = 1;
+         //   print("called once");
+        }
+      
+        //PlaceCubes();
+        if (counter == 100)
+        {
+           // initialRot = transform.rotation;
+            PathManager.RequestPath(transform.position, target.position, OnPathFound);
+            PlaceCubes();
+            counter = 0;
+        }
+        counter++;
+      //  print("counter="+counter);
+
+       
         _shootingTimer -= Time.deltaTime;
 
-        if (_shootingTimer <= 0 /*&& !Bullet.isBulletAlive*/)
+        if (_shootingTimer <= 0)
         {
             _shootingTimer = shootingTime;
             controller.Shoot();
@@ -43,39 +74,57 @@ public class Unit : MonoBehaviour
       //  print(delta.y);
      //  print("z="+delta.z);
         oldPos = transform.position;
+        targetPos = transform;
 
 
         //up
         if (delta.z > 0 && Mathf.Abs(delta.z) > Mathf.Abs(delta.x))
         {
             transform.rotation = initialRot;
-            transform.Rotate(new Vector3(0, 180, 0));
+            transform.Rotate(new Vector3(0, 90, 0));
         } 
         //down
         if (delta.z < 0 &&Mathf.Abs(delta.z) > Mathf.Abs(delta.x))
         {
             transform.rotation = initialRot;
-            transform.Rotate(new Vector3(0, 0, 0));
+            transform.Rotate(new Vector3(0, -90, 0));
         }
         //left
         if (delta.x < 0 && Mathf.Abs(delta.x) > Mathf.Abs(delta.z))
         {
             transform.rotation = initialRot;
-            transform.Rotate(new Vector3(0, 90, 0));
+            transform.Rotate(new Vector3(0, 0, 0));
         }
         //right
         if (delta.x > 0 && Mathf.Abs(delta.x) > Mathf.Abs(delta.z))
         {
             transform.rotation = initialRot;
-            transform.Rotate(new Vector3(0, -90, 0));
+            transform.Rotate(new Vector3(0, 180, 0));
         }
 
        
     }
 
-    public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
+
+    void PlaceCubes()
     {
-        if (pathSuccessful)
+        for (int i = 0; i < numberOfCubes; i++)
+        {
+            Instantiate(cube, GeneratedPosition(), Quaternion.identity);
+        }
+    }
+    Vector3 GeneratedPosition()
+    {
+        float x, y, z;
+        x = target.position.x + 20;
+        y = 0;
+        z = UnityEngine.Random.Range(min, max);
+        return new Vector3(x, y, z);
+    }
+
+    public void OnPathFound(Vector3[] newPath, bool pathFoundSuccessful)
+    {
+        if (pathFoundSuccessful)
         {
             path = newPath;
             StopCoroutine("FollowPath");

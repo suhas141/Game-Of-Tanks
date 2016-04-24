@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/tanks.unity
+- path: Assets/FirstScreen.unity
   isLoaded: 1
   isActive: 1
