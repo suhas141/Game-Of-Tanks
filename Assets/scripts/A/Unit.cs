@@ -19,7 +19,7 @@ public class Unit : MonoBehaviour
     public GameObject cube;
     public int numberOfCubes;
     public int min, max;
-    public int once = 0;
+   
 
     public static Transform targetPos;
 
@@ -41,13 +41,13 @@ public class Unit : MonoBehaviour
 
     void Update()
     {
-        if (once == 0)
-        {
+        //if (once == 0)
+       // {
          //   transform.Rotate(new Vector3(0, 0, 0));
          //   initialRot = transform.rotation;
          //   once = 1;
          //   print("called once");
-        }
+       // }
       
         //PlaceCubes();
         if (counter == 100)

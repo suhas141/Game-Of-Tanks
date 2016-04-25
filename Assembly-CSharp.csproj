@@ -58,6 +58,7 @@
      <Compile Include="Assets\scripts\TankControls\AddScoreOnDestroy.cs" />
      <Compile Include="Assets\scripts\TankControls\Bullet.cs" />
      <Compile Include="Assets\scripts\TankControls\ChangeScene.cs" />
+     <Compile Include="Assets\scripts\TankControls\FollowCamera.cs" />
      <Compile Include="Assets\scripts\TankControls\InputHandler.cs" />
      <Compile Include="Assets\scripts\TankControls\TankController.cs" />
      <Compile Include="Assets\scripts\TankControls\destroyOnDamage.cs" />
@@ -69,6 +70,10 @@
  <Reference Include="UnityEngine.Networking">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{C64BF173-416C-D11D-53F0-0B049C7972E9}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

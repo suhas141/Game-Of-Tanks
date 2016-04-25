@@ -177,10 +177,14 @@ public class PCG : MonoBehaviour
         string min = ((int)d / 60).ToString();
         string sec = (d % 60).ToString("f0");
 
-
-        InTime.text = "Time:" + min + ":" + sec;
         int p = int.Parse(sec);
         int m = int.Parse(min);
+
+        int totalsec = 60 * m + p;
+
+
+        InTime.text = "Time: " + totalsec + " sec";
+       
 
         int tanksDestroyed = AddScoreOnDestroy.scrores;
 
@@ -189,7 +193,7 @@ public class PCG : MonoBehaviour
         int total = tanksDestroyed * 1000 + m * 600 + p * 10;
 
         //  if (!destroyOnDamage.isGameOver)
-        Points.text = "Score:" + total;
+        Points.text = "Score: " + total;
 
 
 

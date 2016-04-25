@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{67ED9667-9BE4-5908-F0B3-BECDBB979B44}") = "Game-Of-Tanks-master", "Assembly-CSharp-firstpass.csproj", "{C64BF173-416C-D11D-53F0-0B049C7972E9}"
+EndProject
 Project("{67ED9667-9BE4-5908-F0B3-BECDBB979B44}") = "Game-Of-Tanks-master", "Assembly-CSharp.csproj", "{35AE9DC1-4A1B-45DA-7F92-8828F1244CA0}"
 EndProject
 Global
@@ -9,6 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C64BF173-416C-D11D-53F0-0B049C7972E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C64BF173-416C-D11D-53F0-0B049C7972E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C64BF173-416C-D11D-53F0-0B049C7972E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C64BF173-416C-D11D-53F0-0B049C7972E9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{35AE9DC1-4A1B-45DA-7F92-8828F1244CA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{35AE9DC1-4A1B-45DA-7F92-8828F1244CA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35AE9DC1-4A1B-45DA-7F92-8828F1244CA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
